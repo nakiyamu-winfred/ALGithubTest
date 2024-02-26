@@ -2,8 +2,9 @@ page 50107 InbuiltFunctions
 {
     PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = Documents;
     //SourceTable = TableName;
+    Caption ='Inbuilt Functions';
     
     layout
     {
