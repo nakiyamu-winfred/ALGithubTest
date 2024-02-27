@@ -31,12 +31,40 @@ page 50107 InbuiltFunctions
                 
                 trigger OnAction()
                 begin
-                    
+                    ConfirmMethod();
+                    ErrorMethod();
+                    StringMethod()
                 end;
             }
         }
     }
+    procedure ConfirmMethod()
     
+    begin
+       if Confirm('Do you want to continue') then
+       Message('Yes')
+       else
+        Error('no')
+    end;
+ procedure ErrorMethod()
+    
+    begin
+      
+       Error('Wrong Input')
+      
+    end;
+    
+procedure StringMethod()
     var
-        myInt: Integer;
+        Hobbies:Text[50];
+        Selection: Integer;
+    begin
+     Hobbies:='Swimming,Reading,Traveling';
+     Selection:= StrMenu(Hobbies,1,'Choose one Hobby?');
+      Message('You selected %1',Selection);
+      
+    end;
+    var
+      
+        Int: Integer;
 }
